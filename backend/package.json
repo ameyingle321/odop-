@@ -1,0 +1,33 @@
+{
+  "name": "odop-nexus-backend",
+  "version": "1.0.0",
+  "description": "ODOP Nexus Backend API",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test:auth": "node tests/auth.test.js",
+    "test:seller": "node tests/seller.test.js",
+    "test:discovery": "node tests/discovery.test.js",
+    "test:cart": "node tests/cart_order.test.js",
+    "test:payment": "node tests/payment.test.js",
+    "test:review": "node tests/review.test.js",
+    "test:e2e": "node tests/e2e_full_journey.test.js",
+    "test": "node tests/auth.test.js && node tests/seller.test.js && node tests/discovery.test.js && node tests/cart_order.test.js && node tests/payment.test.js && node tests/review.test.js && node tests/e2e_full_journey.test.js"
+  },
+  "keywords": [],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "joi": "^18.2.9",
+    "razorpay": "^2.9.8"
+  },
+  "devDependencies": {
+    "pg": "^8.23.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "odop-nexus",
+  "version": "1.0.0",
+  "description": "ODOP Nexus — District-Based ODOP Marketplace",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"backend,frontend\" -c \"blue,green\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "install:frontend": "npm --prefix frontend install",
+    "install:backend": "npm --prefix backend install",
+    "install:all": "npm install && npm run install:frontend && npm run install:backend",
+    "db:verify": "node database/verify-database.js",
+    "db:migrate": "node database/run-migrations.js"
+  },
+  "keywords": [
+    "odop",
+    "marketplace",
+    "district"
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
